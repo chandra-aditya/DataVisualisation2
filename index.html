@@ -16,22 +16,26 @@
 
     <!-- Import css -->
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital@0;1&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <div class="pure-g">
+<body class="page">
+    <!-- <div class="pure-g">
         <div class="pure-u-1-1">
             <h1>Data Visualisation II</h1>
         </div>
-    </div>
+    </div> -->
 
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-1">
             <div class="description description-middle">
-                <h2>World Death by Air Pollution (1990-2017)</h2>
-                <p>
-                    Text: Work in progress
+                <h1>World Death by Air Pollution 1990-2017 Visualisation</h2>
+                <p class="italic">
+                    This visualisation aims to cater everyone for information purposes with the hope to spread awareness on how air condition plays crucial part in our daily life, especially drive those who have been doing harm to the air condition to cease or limit what they do that worsen air pollution. 
                 </p>
             </div>
         </div>
@@ -41,79 +45,117 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-        <div class="pure-u-1-1">
+        <div class="pure-u-1-1 description-middle">
+            <h2>World Number of Death</h2>
+            <p>Here we can see that Papua New Guinea is the highest throughout the year,
+                <br> and South American countries amongst the lowest consistently.
+            </p>
             <div id="map_overview"></div>
         </div>
     </div>
     <!-- end pure grid group -->
+
+</br>
+
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <div class="description-middle">
+                <h2>10 Highest Countries</h2>
+                <p>
+                    Below is an illustration of 10 countries with highest number of death and its respective pollution type
+                </p>
+                <P>Here we can see that following Papua New Guinea we have Afghanistan and Central African Republic as well
+                    that consistently stay within highest 10, <br> and most the counries included are a economically growing country.
+                </P>
+            </div>
+            
+        </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+    </br>
+       
+        <div class="pure-u-1-3">
+            <div>
+                <h3>Total</h3>
+                <div id="top_10_world" class="vis-container"></div>
+            </div>
+            <P>
+                TEST
+            </P>
+        </div>
+
+
+        <div class="pure-u-1-3">
+            <div>
+                <h3>Indoor Air Pollution</h3>
+                <div id="top_10_indoor" class="vis-container"></div>
+            </div>
+        </div>
+
+
+        <div class="pure-u-1-3">
+            <div>
+                <h3>Outdoor Air Pollution</h3>
+                <div id="top_10_outdoor" class="vis-container"></div>
+            </div>
+        </div>
+
+    </div>
+    <!-- end pure grid group -->
+
+    </br>
 
 
     <!-- pure grid group -->
     <div class="pure-g">
         <div class="pure-u-1-3">
             <div class="description description-left">
-                <h2>10 Highest Countries</h2>
-                    <div id="top_10_world" class="vis-container"></div>
-                </div>
+                <h2>Total Number of Death</h2>
+                <p>
+                    Here we can see that the number is steadily declining throughout the year, peaking at the same year which is 1990.
+                    <br> <br>
+                    
+                    Furthemore, death due to outdoor air pollution consistently way lower than death due by indoor air pollution throughout every year presented below.
+                </p>
             </div>
-
-
-            <div class="pure-u-1-3">
-                <div class="description description-left">
-                    <h2>Indoor Pollution</h2>
-                    <div id="top_10_indoor" class="vis-container"></div>
-                </div>
-            </div>
-
-
-            <div class="pure-u-1-3">
-                <div class="description description-left">
-                    <h2>Outdoor Pollution</h2>
-                    <div id="top_10_outdoor" class="vis-container"></div>
-                </div>
-            </div>
-
-
+        </div>
+        <div class="pure-u-2-3">
+            <div id="world_yearly" class="vis-container"></div>
         </div>
     </div>
-        <!-- end pure grid group -->
+    <!-- end pure grid group -->
 
-
-        <!-- pure grid group -->
-        <!-- <div class="pure-g">
+    <!-- pure grid group -->
+    <div class="pure-g">
         <div class="pure-u-1-2">
-            <div class="description description-left">
-                <h2>Third Vis</h2>
-                <p>
-                    The first column contains text and the second column contains a visualisation.
-                    WORK IN PROGRESS
-                </p>
-            </div>
+            <h3>Indoor Air Pollution</h3>
+            <div id="indoor_yearly" class="vis-container"></div>
         </div>
-        <div class="pure-u-1-2">
-            <div id="top_10_world" class="vis-container"></div>
-        </div>
-    </div> -->
-        <!-- end pure grid group -->
 
-
-
-        <!-- pure grid group -->
-        <!-- <div class="pure-g">
         <div class="pure-u-1-2">
-            <div class="description description-left">
-                <h2>Fourth Vis</h2>
-                <p> 
-                    The first column contains text and the second column contains a visualisation.
-                    WORK IN PROGRESS
-                </p>
-            </div>
+            <h3>Outdoor Air Pollution</h3>
+            <div id="outdoor_yearly" class="vis-container"></div>
         </div>
-        <div class="pure-u-1-2">
-            <div id="top_10_world" class="vis-container"></div>
+    </div>
+    <!-- end pure grid group -->
+
+<br>
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+        <div class="pure-u-1-1">
+            <p class="italic description-middle">Created by Chandra Putra. 
+                <br>
+                <a href="https://github.com/chandra-aditya/DataVisualisation2">Repository</a>
+            </p>
         </div>
-    </div> -->
-        <!-- end pure grid group -->
+    </div>
+    <!-- end pure grid group -->
 
 </body>
 
@@ -123,6 +165,12 @@
         var spec2 = "js/2_top_10_chart.json";
         var spec3 = "js/3_indoor_bar.json";
         var spec4 = "js/4_outdoor_bar.json";
+        var spec5 = "js/5_area_total.json";
+        var spec6 = "js/6_indoor_death.json";
+        var spec7 = "js/6_outdoor_death.json";
+
+        vega.scheme('basic', ["#56acd8","#4386a8","#264c60","#132630","#000000"]);
+
 
         vegaEmbed('#map_overview', spec1).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
@@ -139,18 +187,19 @@
         vegaEmbed('#top_10_outdoor', spec4).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
         }).catch(console.error);
+
+        vegaEmbed('#world_yearly', spec5).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#indoor_yearly', spec6).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        vegaEmbed('#outdoor_yearly', spec7).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
     </script>
 </footer>
 
 </html>
-
-<!-- idea
-- intro
-- world map
-- TOP 10 STACKED BAR CHART - add world average
-- outdoor vs indoor (bar chart)
-- explain could caused by something
-- top 10 countries number of Death (list)
-- Take focus to america
-- 
--  -->
