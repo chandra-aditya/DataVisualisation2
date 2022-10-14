@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 1400,
+  "width": 1200,
   "height": 700,
   "data": {
     "url": "https://raw.githubusercontent.com/chandra-aditya/DataVisualisation2/main/data/death-rates-from-air-pollution.csv"
@@ -69,11 +69,14 @@
             "field": "Total_Death", 
             "type": "quantitative",
             "title": "Total Deaths (100.000)",
-            "scale": {"scheme": "bluepurple"}
+            "scale": {"scheme": "basic"},
+            "legend": {"orient": "bottom"}
         },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-          {"field": "Total_Death", "type": "quantitative", "title": "Total Deaths"}
+          {"field": "Total_Death", "type": "quantitative", "title": "Total Deaths"},
+          {"field": "Indoor_Pollution", "type": "quantitative", "title": "Indoor"},
+          {"field": "Outdoor_Total", "type": "quantitative", "title": "Outdoor"}
         ]
       }
     }

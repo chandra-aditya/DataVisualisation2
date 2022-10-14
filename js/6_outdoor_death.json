@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stock prices of 5 Tech Companies over Time.",
+    "width":"container",
+    "data": {
+        "url": "https://raw.githubusercontent.com/chandra-aditya/DataVisualisation2/main/data/death-rates-from-air-pollution.csv"
+    },
+    "params": [
+        {
+            "name": "country",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Australia",
+                    "China",
+                    "New Zealand",
+                    "Indonesia",
+                    "Singapore",
+                    "Malaysia"
+                ],
+                "labels": [
+                    "World"
+                ],
+                "name": "Country:"
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "country == null ||datum.Entity == country"
+        }
+    ],
+    "mark": {
+        "type": "line",
+        "point": true
+    },
+    "encoding": {
+        "x": {
+            "timeUnit": "year",
+            "field": "Year",
+            "axis": {
+                "format": "%Y"
+            },
+            "title": "Year"
+        },
+        "y": {
+            "aggregate": "sum",
+            "field": "Outdoor_Total",
+            "title": "Number of death (100,000)"
+        },
+        "tooltip": [
+            {
+                "field": "sum_Outdoor_Total",
+                "type": "quantitative",
+                "title": "total number of death",
+                "format": ".2f"
+            },
+            {
+                "field": "year_Year",
+                "timeUnit": "year",
+                "format": "%Y",
+                "type": "ordinal",
+                "title": "year"
+            }
+        ],
+        "color": {"value": "#60C0F0"}
+    }
+}

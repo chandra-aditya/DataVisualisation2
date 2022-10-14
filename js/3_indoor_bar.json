@@ -51,6 +51,10 @@
       "filter": "datum.Year==year"
     },
     {
+      "calculate": "datum.Total_Death * 1",
+      "as": "Total_Death2"
+    },
+    {
       "window": [
         {
           "op": "rank",
@@ -59,8 +63,8 @@
       ],
       "sort": [
         {
-          "field": "Total_Death",
-          "order": "ascending"
+          "field": "Total_Death2",
+          "order": "descending"
         }
       ]
     },
@@ -70,7 +74,10 @@
   ],
   "layer": [
     {
-      "mark": "bar"
+      "mark": "bar",
+      "encoding": {
+        "color": {"value": "#60C0F0"}
+      }
     },
     {
       "mark": {
@@ -83,7 +90,7 @@
         "text": {
           "field": "Indoor_Pollution",
           "type": "quantitative",
-          "format": ".2f"
+          "format": ".1f"
         }
       }
     }

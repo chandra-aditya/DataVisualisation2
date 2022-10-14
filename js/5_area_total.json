@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": "container",
+    "data": {
+        "url": "https://raw.githubusercontent.com/chandra-aditya/DataVisualisation2/main/data/death-rates-from-air-pollution.csv"
+    },
+    "mark": {
+        "type": "area",
+        "line": true,
+        "point": true
+    },
+    "params": [
+        {
+            "name": "country",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Australia",
+                    "China",
+                    "New Zealand",
+                    "Indonesia",
+                    "Singapore",
+                    "Malaysia"
+                ],
+                "labels": [
+                    "World"
+                ],
+                "name": "Country:"
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "country == null ||datum.Entity == country"
+        }
+    ],
+    "encoding": {
+        "x": {
+            "timeUnit": "year",
+            "field": "Year",
+            "axis": {
+                "format": "%Y"
+            },
+            "title": "Year"
+        },
+        "y": {
+            "aggregate": "sum",
+            "field": "Total_Death",
+            "title": "Number of death (100,000)"
+        },
+        "tooltip": [
+            {
+                "field": "sum_Total_Death",
+                "type": "quantitative",
+                "title": "total number of death",
+                "format": ".2f"
+            },
+            {
+                "field": "year_Year",
+                "timeUnit": "year",
+                "format": "%Y",
+                "type": "ordinal",
+                "title": "year"
+            }
+        ],
+        "color": {"value": "#60C0F0"}
+    }
+}
